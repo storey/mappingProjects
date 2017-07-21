@@ -9,7 +9,7 @@ For the final assignment in my class, I worked on mapping the sky in an alternat
 In order to create the gnomonic cube image visible there, take the following steps. All commands are to be typed into the command line starting in this directory.
 
 1) Compile readHYGData.java with `javac readHYGData.java`
-2) Extract location and magnitude data from the HYG dataset with `java readHYGData rawData/hygfull.csv 1 > pointData/brightestAlternateHYG.txt`. The 1 specifies that we want brightness based on length rather than true brightness.
+2) Extract location and magnitude data from the HYG dataset with `java readHYGData rawData/hygfull.csv 1 0 > pointData/brightestAlternateHYG.txt`. The 1 specifies that we want brightness based on length rather than true brightness.
 3) Compile createMapStdDraw.java with `javac createMapStdDraw.java`
 4) Create the gnomonic cube map of this alternate universe with `java createMapStdDraw gnomonicBG.png 6 alternateGnomonic 1 brightestAlternateHYG.txt` (starting with the gnomonicBG file as a base, draw a gnomonic cube (map type 6) saved as alternateGnomonic.png. The point data comes from 1 file, brightestAlternateHYG.txt). It will take a few moments to complete the drawing, and you will have to close the draw window yourself.
 
