@@ -86,6 +86,8 @@ public class readHYGData
             else return Double.parseDouble(input);
         }
 
+
+        // comparison functions
         public int compareTo(Star that)
         {
             return compareMag(that);
@@ -118,6 +120,9 @@ public class readHYGData
             else if (this.RA > that.RA) return  1;
             else                          return  0;
         }
+
+
+        // getters
 
         public double getMag()
         {
@@ -248,6 +253,7 @@ public class readHYGData
     // writes from k input files onto the blank file, then saves it as the final name
     public static void main(String[] args)
     {
+        // get inputs
         String inputFilename = args[0];
         int magnitudeType = Integer.parseInt(args[1]);
         int includeColorInt = Integer.parseInt(args[2]);
@@ -270,6 +276,7 @@ public class readHYGData
         int i = 0;
 
 
+        // get the list of stars from the data file
         Star temp;
         try {
             myScanner = new Scanner(myFile);
@@ -316,7 +323,7 @@ public class readHYGData
                     if (Math.abs(myStars[i+n].getDec() - myStars[i].getDec()) < 0.01)
                     {
                         // uncomment to view which stars are close to eachother.
-                        //System.err.println(i+" ; "+(i+n));
+                        // System.err.println(i+" ; "+(i+n));
                         double newMag;
                         if (magnitudeType == 1) {
                           newMag = myStars[i+n].getNormMag();

@@ -269,7 +269,6 @@ public class createMap
     // draw a square with sides of len
     private static void draw3by3Point(int x, int y, int color, BufferedImage image)
     {
-
         int width = image.getWidth();
         int height = image.getHeight();
         image.setRGB(x, y, color);
@@ -388,7 +387,5 @@ public class createMap
         {
             System.err.println(e);
         }
-
-
     }
 }

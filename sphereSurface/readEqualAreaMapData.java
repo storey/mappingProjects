@@ -119,8 +119,12 @@ public class readEqualAreaMapData
         int height = img.getHeight();
         int width = img.getWidth();
 
+        // grab the orientation, either along the equator (standard) or
+        // meridian (oblique)
         int orientation = Integer.parseInt(args[1]);
 
+
+        // extract the pixel data.
         for (int i = 0; i < width; i++)
         {
             for (int j = 0; j < height; j++)
